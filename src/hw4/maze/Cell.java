@@ -1,13 +1,17 @@
 package hw4.maze;
 
 import java.util.ArrayList;
-
+/*
+* this makes the cells that the grid is comprised of
+* cells contain four sides for cells
+*
+*/
 public class Cell {
 	private CellComponents left;
 	private CellComponents right;
 	private CellComponents up;
 	private CellComponents down;
-	
+	//componets for the cells
 	public Cell(CellComponents wall, CellComponents exit, CellComponents aperture, CellComponents wall2) {
 		this.left = wall;
 		this.right = exit;
@@ -15,7 +19,7 @@ public class Cell {
 		this.down = wall2;
 		// TODO Auto-generated constructor stub
 	}
-
+	//gets left side
 	public CellComponents getLeft() {
 		return left;
 	}
@@ -28,7 +32,7 @@ public class Cell {
 			this.left = left;
 		}
 	}
-
+	//gets rightside
 	public CellComponents getRight() {
 		return right;
 	}
@@ -41,7 +45,7 @@ public class Cell {
 			this.right = right;
 		}
 	}
-
+	//gets up
 	public CellComponents getUp() {
 		return up;
 	}
@@ -54,7 +58,7 @@ public class Cell {
 			this.up = up;
 		}
 	}
-
+	//gets down
 	public CellComponents getDown() {
 		return down;
 	}
