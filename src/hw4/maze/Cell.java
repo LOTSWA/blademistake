@@ -8,7 +8,7 @@ public class Cell {
 	private CellComponents up;
 	private CellComponents down;
 	
-	public Cell(CellComponents wall, CellComponents exit, CellComponents aperture, CellComponents wall2) {
+	public Cell(CellComponents wall, CellComponents exit, CellComponents aperture, CellComponents wall2) {  //The cell class that contains the elements in the cell that are used throughout the program
 		this.left = wall;
 		this.right = exit;
 		this.up = aperture;

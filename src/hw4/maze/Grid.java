@@ -6,7 +6,7 @@ public class Grid {
 
 	private ArrayList<Row> rows;
 
-	public Grid(ArrayList<Row> rows) {
+	public Grid(ArrayList<Row> rows) {                   //This code is used to create the grid used in the program
 		this.rows = rows;
 		// TODO Auto-generated constructor stub
 	}
