@@ -11,30 +11,56 @@ import hw4.maze.CellComponents;
 import hw4.maze.Cell;
 
 public class Game {
-	
+	/**
+	 * making fields for grid and random, random is for making random comps
+	 */
 	private Random random = new Random();
 	private Grid grid;
 
+		/**
+		 * grid parameter for the game
+		 * @param grid
+		 */
 	public Game(Grid grid) {
 		this.grid = grid;
 		// TODO Auto-generated constructor stub
 	}
 
+		/**
+		 * parameter to randomize grid pattern
+		 * @param size
+		 * 			size is between 3 and 7
+		 */
 	public Game(int size) {
 		this.grid = createRandomGrid(size);
 		// TODO Auto-generated constructor stub
 	}
 
+		/**
+		 * getter for the grid
+		 * @return
+		 * 			returns the current grid
+		 */
 	public Grid getGrid() {
 		// TODO Auto-generated method stub
 		return grid;
 	}
 
+		/**
+		 * setter for the grid
+		 * @param grid
+		 * 			sets the grid
+		 */
 	public void setGrid(Grid grid) {
 		this.grid = grid;
 		// TODO Auto-generated method stub
 	}
 	
+	/**
+	 * this method generates random cell comps which can be the wall or aperture
+	 * @return
+	 * 		returns the randomized wall or aperture
+	 */
 	private CellComponents getRandomize() {
 		if(random.nextBoolean())
 		{
@@ -46,6 +72,15 @@ public class Game {
 		}
 	}
 
+		/**
+		 * this method is for the movement, handled by using a switch statement
+		 * @param movement
+		 * 				movement is the direct which can be up down left or right
+		 * @param player
+		 * 				player is moving
+		 * @return
+		 * 				returning either true if it worked or false if it didnt
+		 */
 	public boolean play(Movement movement, Player player) {
 		if(movement == null || player == null)
 		{
@@ -113,6 +148,13 @@ public class Game {
 		return false;	
 	}
 
+		/**
+		 * this method creates a grid that is randomized and within the constraints of 3 to 7 and exit to left
+		 * @param i
+		 * 			i is the size for the grid, which is limited to 3 to 7
+		 * @return
+		 * 			returning the grid or null if it doesn't work
+		 */
 	public Grid createRandomGrid(int i) {
 		if(i < 3 || i > 7)
 		{
@@ -180,7 +222,9 @@ public class Game {
 		return new Grid(rows);
 		// TODO Auto-generated method stub
 	}
-	
+	/**
+	 * this is a string to string method
+	 */
 	@Override
 	public String toString() {
 		return "Game [grid=" + grid + "]";
