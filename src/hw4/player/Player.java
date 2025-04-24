@@ -7,7 +7,7 @@ import hw4.maze.Row;
 
 public class Player {
 	
-	private ArrayList<Cell> cells;
+	private ArrayList<Cell> cells;                         
 	private Row currentRow;
 	private Cell currentCell;
 	

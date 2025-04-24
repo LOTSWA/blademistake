@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Row {
 	
-	private ArrayList<Cell> cells;
+	private ArrayList<Cell> cells;                           //RETURNS ROWS OF CELLS
 	
 	public Row(ArrayList<Cell> cells) {
 		this.cells = cells;
